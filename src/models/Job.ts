@@ -15,7 +15,11 @@ const jobSchema = new Schema<IJob>(
       required: [true, 'Please provide job position'],
       default: 'pending',
     },
-    status: { type: String, enum: ['pending', 'declined', 'interview'] },
+    status: {
+      type: String,
+      enum: ['pending', 'declined', 'interview'],
+      default: 'pending',
+    },
     createdBy: {
       type: Schema.Types.ObjectId,
       ref: 'User',

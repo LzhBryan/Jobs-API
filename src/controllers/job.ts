@@ -3,7 +3,7 @@ import { body, validationResult, ValidationChain } from 'express-validator'
 import { StatusCodes } from 'http-status-codes'
 import Job from '../models/Job'
 import { CustomRequest } from '../middlewares/authentication'
-import { BadRequestError, NotFoundError } from '../errors'
+import { NotFoundError } from '../errors'
 
 const getJobs = async (req: CustomRequest, res: Response) => {
   const jobs = await Job.find({ createdBy: req.user.userId })
