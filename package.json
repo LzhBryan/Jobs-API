@@ -5,9 +5,9 @@
   "main": "src/app.ts",
   "scripts": {
     "build": "tsc",
-    "start": "corss-env NODE_ENV=production dist/server.js",
-    "dev": "cross-env NODE_ENV=development concurrently \"npx tsc -w\" \"nodemon dist/server.js\"",
-    "test": "cross-env NODE_ENV=test && jest --watchAll"
+    "start": "cross-env dist/server.js",
+    "dev": "cross-env concurrently \"npx tsc -w\" \"nodemon dist/server.js\"",
+    "test": "cross-env jest --watchAll"
   },
   "keywords": [],
   "author": "",
