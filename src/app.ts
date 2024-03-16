@@ -48,7 +48,7 @@ export const jobRoute = '/api/v1/jobs'
 app.use(authRoute, authRouter)
 app.use(jobRoute, authenticateUser, jobRouter)
 
-app.use(errorHandler)
 app.use(notFound)
+app.use(errorHandler)
 
 export default app
